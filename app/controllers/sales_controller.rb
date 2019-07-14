@@ -27,7 +27,7 @@ class SalesController < ApplicationController
       end
 
       @sale.save
-      redirect_to sale_path(:id)
+      redirect_to sale_path(@sale, :id)
   end
 
   def done

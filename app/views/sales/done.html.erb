@@ -1,0 +1,35 @@
+
+<h3 style="text-align: center";>El registro fue almacenado con éxito </h3><br>
+<div class="container">
+
+<table class="table table-hover">
+  <thead>
+    <tr>
+      <th> Código</th>
+      <th> Detalles</th>
+      <th> Categoría</th>
+      <th> Precio</th>
+      <th> Descuento</th>
+      <th> Precio Final</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+      <tr>
+        <td><%= @sale.cod %></td>
+        <td><%= @sale.detail %></td>
+        <td><%= @sale.category %></td>
+        <td><%= @sale.value %> </td>
+        <td><%= @sale.discount %> </td>
+        <td><%= @sale.total %> </td>
+
+
+      </tr>
+
+  </tbody>
+</table>
+
+    <%= link_to "Volver al índice", sales_path, class: "btn btn-secondary" %>
+    <%= link_to "Volver al formulario", sales_new_path, class: "btn btn-warning" %>
+</div>

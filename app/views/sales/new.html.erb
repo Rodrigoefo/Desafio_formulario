@@ -1,0 +1,29 @@
+<h3>Formulario de ventas</h3><br>
+<%= form_with model: @sale, local:true do |f|%>
+    <%= f.label:cod, "código" %>
+    <%= f.number_field:cod %>
+    <br>
+
+    <%= f.label:detail, "detalles" %>
+    <%= f.text_area:detail %>
+
+    <br>
+    <%= f.label:category, "categoría" %>
+    <%= f.text_field:category %>
+
+    <br>
+    <%= f.label:value, "value" %>
+    <%= f.number_field:value %>
+    <br>
+
+    <%= f.label:discount, "Agregar descuento" %>
+    <%= f.number_field:discount %>
+    <br>
+
+    <%= f.label:tax, 'Exento de IVA' %>
+    <%= f.check_box:tax %>
+    <br>
+
+    <%= f.submit "Enviar" %>
+
+<% end %>
